@@ -17,10 +17,3 @@
     </tr>
   <% end %>
 </table>
-
-
-<% @articles.each do |article| %>
-   <ul>
-    <li><%= link_to article.title, article_path(article) %></li>
-  </ul>
-<% end %>
