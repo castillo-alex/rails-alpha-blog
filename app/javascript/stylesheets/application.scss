@@ -1,1 +1,121 @@
 @import "~bootstrap/scss/bootstrap";
+
+:root {
+  --main-bg-color: #ABC8E9;
+  --second-color : #4E8AD0;
+  --third-color  : #275A93;
+  --fourth-color : #112740;
+  --fifth-color  : #0B1929;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  // background-image: url(/assets/blog_background.jpg);
+  // background-size: cover;
+  // background-repeat: no-repeat;
+}
+
+#logo {
+  float: left;
+  font-size: 1.7em;
+  color: var();
+  letter-spacing: -1px;
+  font-weight: bold;
+  -webkit-transition: -webkit-transform .8s ease-in-out;
+  -ms-transition: -ms-transform .8s ease-in-out;
+  transition: transform .8s ease-in-out;
+  // transform: rotate(-360deg);
+}
+
+#logo:hover {
+  transform: rotate(360deg);
+  // color: rgb(229, 227, 228);
+  // text-decoration: none;
+  // transition-delay: 0.8s;
+  // transition-duration: 2s;
+}
+
+.nav-link {
+  color: black;
+}
+
+.nav-link:hover {
+  color: whitesmoke;
+}
+
+.center {
+  text-align: center;
+}
+
+.jumbotron {
+  background-image: url(/assets/jumbo_background.gif);
+  background-size: cover;
+  height: 530px;
+  color: whitesmoke
+}
+
+.jumbotron h1 {
+  color: whitesmoke;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+.jumbotron p {
+  color: var(--fourth-color);
+}
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #777;
+}
+
+footer a:hover {
+  color: #222;
+}
+
+footer small {
+  float: left;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 15px;
+}
+
+// font-awesome search icon for search bar
+@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
+.search {
+  position: relative;
+  color: #aaa;
+  font-size: 16px;
+}
+
+.search input {
+  width: 250px;
+  height: 32px;
+
+  background: #fcfcfc;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  box-shadow: 0 0 3px #ccc, 0 10px 15px #ebebeb inset;
+}
+
+.search input { text-indent: 32px;}
+.search .fa-search {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}

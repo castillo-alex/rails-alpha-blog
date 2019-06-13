@@ -1,14 +1,7 @@
-<h1>My Home Page</h1>
-<h2>My name is Alex Castillo</h2>
-<%= image_tag 'me.jpg',
-alt: "alex-castillo",
-width: "250",
-height: "250"
-%>
-<p>
-  I am a web development student at
-  <a href="https://wyncode.co/" target="_blank">Wyncode Academy.</a>
-</p>
-
-<%= link_to 'Alpha Blog', articles_path %> |
-<%= link_to 'About', about_path %>
+<div class="jumbotron center">
+  <h1 class="display-4">Welcome to My Blog</h1>
+  <hr class="my-4">
+  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+  <%= link_to 'Sign Up', '#', class: "btn btn-dark btn-lg", role: "button" %>
+</div>
