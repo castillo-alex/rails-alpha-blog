@@ -3,7 +3,7 @@
 <% @articles.each do |article| %>
   <div class="row article-listing-card">
     <div class="col-sm-8 col-sm offset-2">
-      <div class="card bg-light text-info">
+      <div class="card">
         <div class="article-title card-body">
           <%= link_to article.title, article_path(article), class: "card-title" %>
           <p class="card-text"><%= truncate(article.description, length: 30) %></p>

@@ -1,22 +1,24 @@
 @import "~bootstrap/scss/bootstrap";
 
 :root {
-  --main-bg-color: #ABC8E9;
-  --second-color : #4E8AD0;
-  --third-color  : #275A93;
-  --fourth-color : #112740;
-  --fifth-color  : #0B1929;
+  --first-color  : #d7d9d9;
+  --second-color : #b1b4b5;
+  --third-color  : #8c9192;
+  --fourth-color : #696f71;
+  --fifth-color  : #484f51;
+  --sixth-color  : #293133;
 }
 
-html,
-body {
-  height: 100%;
-}
+html, body {min-height: 100%;}
 
 body {
-  // background-image: url(/assets/blog_background.jpg);
-  // background-size: cover;
-  // background-repeat: no-repeat;
+  background-image: linear-gradient(var(--first-color), var(--sixth-color));
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.card {
+  background-color: var(--first-color);
 }
 
 #logo {
