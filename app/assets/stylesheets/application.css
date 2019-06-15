@@ -13,3 +13,11 @@
  *= require_tree .
  *= require_self
  */
+
+.article-actions {
+  margin-top: 1rem;
+}
+
+#delete-article-btn {
+  margin-left: 35.35%;
+}
