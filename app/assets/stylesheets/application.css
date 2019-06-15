@@ -14,8 +14,12 @@
  *= require_self
  */
 
+.header {
+  color: whitesmoke;
+}
+
 .article-actions {
-  border-top: 1px solid #eaeaea;
+  border-top: 1px solid whitesmoke;
   padding-top: 5px;
   margin-bottom: 1rem;
 }
@@ -30,7 +34,12 @@
 }
 
 .card-text {
-  border-top: 1px solid #eaeaea;
+  border-top: 1px solid whitesmoke;
   padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.article-timestamp {
+  border-top: 1px solid whitesmoke;
   padding-bottom: 15px;
 }

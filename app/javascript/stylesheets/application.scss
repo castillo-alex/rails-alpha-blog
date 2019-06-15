@@ -12,7 +12,7 @@
 html, body {min-height: 100%;}
 
 body {
-  background-image: linear-gradient(var(--first-color), var(--sixth-color));
+  background-image: radial-gradient(var(--sixth-color), var(--first-color));
   background-size: 100%;
   background-repeat: no-repeat;
 }
