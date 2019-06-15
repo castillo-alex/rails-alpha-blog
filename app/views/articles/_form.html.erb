@@ -9,42 +9,49 @@
   </ul>
 <% end %>
 
-
-<%= form_for @article do |f| %>
-  <div class="form-group row">
-    <%= f.label :title,
-        class: "col-sm-2 col-form-label"
-    %>
-    <%= f.text_field :title,
-       autocomplete: "off",
-       autofocus: true,
-       class: "col-sm-8 form-control",
-       placeholder: "Title of article"
-     %>
-     <span class="column">
-       <%= link_to "Reset <br/> Article".html_safe,
-       new_article_path,
-       class: "badge badge-danger offset-1"
-       %>
-     </span>
+<div class='row'>
+  <div class='col-sm-12'>
+    <%= form_for(@article, :html => {class: "form-horizontal", role: "form"}) do |f| %>
+      <div class="form-group row">
+        <div class="control-label col-sm-2">
+          <%= f.label :title %>
+        </div>
+        <div class="col-sm-8">
+          <%= f.text_field :title,
+              autocomplete: "off",
+              autofocus: true,
+              class: "form-control",
+              placeholder: "Title of article"
+           %>
+        </div>
+        <div class="col-sm-2">
+          <%= link_to "Reset <br/> Article".html_safe,
+              new_article_path,
+              class: "badge badge-danger offset-1"
+          %>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="control-label col-sm-2">
+          <%= f.label :description %>
+        </div>
+        <div class="col-sm-8">
+          <%= f.text_area :description,
+              class: "form-control",
+              placeholder: "Body of article",
+              rows: 16
+          %>
+        </div>
+      </div>
+      <div class="form-group row offset-2">
+          <%= f.submit class: "btn btn-info btn-sm col-sm-2" %>
+      </div>
+      <div class="form-group row offset-2">
+          <%= link_to "Back to articles",
+              articles_path,
+              class: "btn btn-secondary btn-sm col-sm-2"
+          %>
+      </div>
+    <% end %>
   </div>
-  <div class="form-group row">
-    <%= f.label :description,
-        class: "col-sm-2 col-form-label"
-     %>
-    <%= f.text_area :description,
-        class: "col-sm-8 form-control",
-        placeholder: "Body of article",
-        rows: 16
-     %>
-  </div>
-  <div class="form-group row">
-    <%= f.submit class: "col-sm-2 offset-sm-2 btn btn-info btn-sm" %>
-  </div>
-  <div class="form-group row">
-    <%= link_to "Back to articles",
-    articles_path,
-    class: "col-sm-2 btn btn-secondary btn-sm offset-2"
-    %>
-  </div>
-<% end %>
+</div>
