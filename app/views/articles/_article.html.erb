@@ -1,0 +1,33 @@
+<% obj.each do |article| %>
+  <div class="row article-listing-card">
+    <div class="col-sm-8 col-sm offset-2">
+      <div class="card">
+        <div class="article-title card-body">
+          <%= link_to article.title, article_path(article), class: "card-title" %>
+          <p class="card-text"><%= truncate(article.description, length: 30) %></p>
+          <div class="article-timestamp">
+            <small>
+              Created by:
+              <%= article.user.username if article.user %>,
+              <%= time_ago_in_words(article.created_at) %> ago.,
+              last updated: <%= time_ago_in_words(article.updated_at) %> ago.
+            </small>
+          </div>
+          <div class="article-actions">
+            <%= link_to 'Edit this article',
+            edit_article_path(article),
+            class: "btn btn-sm btn-info"
+            %>
+            <%= link_to "Delete this artilce",
+            article_path(article),
+            method: :delete,
+            data: {confirm: 'Once deleted, this article can not be recovered. Continue?'},
+            class: "btn btn-sm btn-danger",
+            id: "delete-article-btn"
+            %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
