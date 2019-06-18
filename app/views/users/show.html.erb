@@ -1,6 +1,8 @@
 <% if current_user == @user %>
   <h1 align="center">Welcome, <%= @user.username %>!</h1>
-  <h4 align="center">Here are your articles: </h4>
+  <h4 align="center">
+    You have written  <%= pluralize(@user.articles.count, "article") %>.
+  </h4>
   <% else %>
   <h1 align="center">Showing articles by: </h1>
   <h4 align="center"><%= @user.username %></h4>
