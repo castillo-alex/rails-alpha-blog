@@ -13,19 +13,23 @@
               last updated: <%= time_ago_in_words(article.updated_at) %> ago.
             </small>
           </div>
-          <div class="article-actions">
-            <%= link_to 'Edit this article',
-            edit_article_path(article),
-            class: "btn btn-sm btn-info"
-            %>
-            <%= link_to "Delete this artilce",
-            article_path(article),
-            method: :delete,
-            data: {confirm: 'Once deleted, this article can not be recovered. Continue?'},
-            class: "btn btn-sm btn-danger",
-            id: "delete-article-btn"
-            %>
-          </div>
+          <% if logged_in? && current_user == article.user %>
+            <div class="article-actions">
+              <%=
+                link_to 'Edit this article',
+                edit_article_path(article),
+                class: "btn btn-sm btn-info"
+              %>
+              <%=
+                link_to "Delete this artilce",
+                article_path(article),
+                method: :delete,
+                data: {confirm: 'Once deleted, this article can not be recovered. Continue?'},
+                class: "btn btn-sm btn-danger",
+                id: "delete-article-btn"
+              %>
+            </div>
+          <% end %>
         </div>
       </div>
     </div>

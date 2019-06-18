@@ -1,12 +1,18 @@
-<h1 align="center">Welcome, <%= @user.username %>!</h1>
+<% if current_user == @user %>
+  <h1 align="center">Welcome, <%= @user.username %>!</h1>
+  <h4 align="center">Here are your articles: </h4>
+  <% else %>
+  <h1 align="center">Showing articles by: </h1>
+  <h4 align="center"><%= @user.username %></h4>
+<% end %>
 
-<div class="row">
+<div class="row" style="padding-bottom: 5px">
   <div class="col-md-4 offset-4 center">
     <%= gravatar_for @user, size: 150 %>
   </div>
 </div>
 
-<h4 align="center"><%= @user.username %>'s articles</h4>
+
 <div class="row d-flex justify-content-center">
     <%= will_paginate @user_articles %>
 </div>
